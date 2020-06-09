@@ -1,0 +1,16 @@
+.Welcome {
+	text-align: center;
+	margin: 2%;
+	background: -webkit-linear-gradient(rgb(224, 0, 112), rgb(140, 0, 255));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 42px;
+}
+.UserInfo {
+	border: 1px solid rgb(80, 80, 80);
+	color: white;
+	position: fixed;
+	margin: auto;
+	padding: 1% 1% 10% 1%;
+	text-align: center;
+}

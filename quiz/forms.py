@@ -14,6 +14,7 @@ class QuestionForm(forms.Form):
 
 
 class UserRegistrationForm(UserCreationForm):
+
     password1 = forms.CharField(widget=forms.PasswordInput(attrs={
         'class': 'form-control rounded-pill form-control-lg',
         'placeholder': 'Password',
@@ -27,7 +28,6 @@ class UserRegistrationForm(UserCreationForm):
         model = User
         fields = ['first_name', 'last_name', 'username',
                   'email', 'password1', 'password2']
-
         widgets = {
             'first_name': forms.TextInput(
                 attrs={

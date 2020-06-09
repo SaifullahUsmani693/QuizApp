@@ -1,11 +1,27 @@
 {% extends "base.html" %}
 
+{% load static %}
 {% block content %}
-<h1>This is my index page</h1>
-{% if user.is_authenticated %}
-<p>Username: {{user.username}}</p>
-<p>Name: {{user.first_name}} {{user.last_name}}</p>
-<p>Email: {{user.email}}</p>
-{% endif %}
 
-{% endblock  %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+
+<body>
+
+    <h1 class="Welcome">
+        Welcome To QuizApp
+    </h1>
+    <div class="UserInfo">
+        <aside>
+            {% if user.is_authenticated %}
+
+            <p><b> Username:</b> {{user.username}}</p>
+            <p><b> Email:</b> {{user.email}}</p>
+            {% endif %}
+        </aside>
+    </div>
+
+    {% endblock  %}
+
+</body>

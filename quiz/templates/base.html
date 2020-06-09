@@ -17,14 +17,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <link href="style.css" rel="stylesheet">
-    <title>QuizApp| Welcome</title>
+    <title>QuizApp | Welcome</title>
   </head>
 
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}"><img src="{% static 'images/icon2.png' %}"></a>
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/icon2.png' %}"><span style="text-align: center;
+  margin: 2%;
+  font-size:x-large;
+	background: -webkit-linear-gradient(rgb(224, 0, 112), rgb(140, 0, 255));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;">
+            <b> QuizApp</b></span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,13 +44,13 @@
               <a class="nav-link" href="{% url 'index' %}">DASHBOARD</a>
             </li>
             <li class="nav-item activate">
-              <a class="nav-link" href="{% url 'logout' %}">LOG OUT</a>
-            </li>
-            <li class="nav-item activate">
               <a href="{% url 'quiz_index' %}" class="nav-link">QUIZZES</a>
             </li>
             <li class="nav-item activate">
               <a href="{% url 'quiz_progress' %}" class="nav-link">PROGREESS</a>
+            </li>
+            <li class="nav-item activate">
+              <a class="nav-link" href="{% url 'logout' %}">LOG OUT</a>
             </li>
             {% else %}
             <li class="nav-item activate">

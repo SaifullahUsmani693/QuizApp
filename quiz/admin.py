@@ -10,7 +10,8 @@ from .models import CSVUpload
 
 class CSVUploadsAdmin(admin.ModelAdmin):
     model = CSVUpload
-    list_display= ('title',)
+    list_display = ('title',)
+
 
 class AnswerInline(admin.TabularInline):
     model = Answer
@@ -86,4 +87,4 @@ admin.site.register(Quiz, QuizAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(MCQQuestion, MCQuestionAdmin)
 admin.site.register(Progress, ProgressAdmin)
-admin.site.register(CSVUpload, CSVUploadsAdmin)
+#admin.site.register(CSVUpload, CSVUploadsAdmin)

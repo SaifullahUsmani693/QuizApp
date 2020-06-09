@@ -27,8 +27,10 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(
                 request, f'Account has been created for {username}!')
-
             return redirect('login')
+        else:
+            messages.success(
+                request, f'Username or Password is incorrect!')
 
     else:
         form = UserRegistrationForm()
@@ -275,7 +277,7 @@ def login_user(request):
             messages.success(request, 'You have successfully logged in')
             return redirect("index")
         else:
-            messages.success(request, 'Error logging in')
+            messages.success(request, 'Username or Password Is Incorrect')
             return redirect('login')
     else:
         return render(request, 'login.html', {})
@@ -284,5 +286,4 @@ def login_user(request):
 def logout_user(request):
     logout(request)
     messages.success(request, 'You have been logged out!')
-    print('logout function working')
     return redirect('login')
